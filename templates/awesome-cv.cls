@@ -495,15 +495,15 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{3mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{2.5mm}
+\newcommand{\acvSectionContentTopSkip}{2mm}
 
 
 %-------------------------------------------------------------------------------
 %                Commands for utilities
 %-------------------------------------------------------------------------------
 % Use to align an element of tabular table
-\newcolumntype{Z}[1]{>{\raggedright\let\newline\\\arraybackslash}p{#1}}
+\newcolumntype{Z}[1]{>{\raggedright\let\newline\\\arraybackslash}m{#1}}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -877,7 +877,7 @@
   \begin{flushleft}
     % For alignment debugging:
     % \rowcolors{1}{gray!25}{gray}
-    \begin{tabular*}{\textwidth}{Z{1.25in} Z{\textwidth - 1.25in} @{\extracolsep{\fill}}}
+    \begin{tabular*}{\textwidth}{Z{1.25in}  @{ } Z{\textwidth - 1.2in} @{\extracolsep{\fill}}}
 }{%
     \end{tabular*}
   \end{flushleft}
@@ -899,12 +899,13 @@
 
 % tcolorbox manual: https://ctan.mirrors.hoobly.com/macros/latex/contrib/tcolorbox/tcolorbox.pdf
 \tcbset{on line, box align=bottom, enlarge bottom by=0.2em, valign=top, boxrule=1pt, boxsep=1pt, right skip=0.2em, left skip=0pt, left=3pt,right=3pt,top=1.5pt,bottom=1.5pt,colframe=pink, colback=pink}
-\newcommand*{\backgroundedSkillTag}[3]{ %
+\newcommand*{\backgroundedSkillTag}[2]{ %
   \colorlet{BackgroundMixed}{#1!50!tagPaleGray}%
   \colorlet{PaleBackground}{BackgroundMixed!4}%
-  \skillTag{#1}{BackgroundMixed}{#3}
+  \skillTag{#1}{BackgroundMixed}{#2}
   }
-\newcommand*{\skillTag}[3]{\tcbox[colframe=#1, colback=#2]{\skilltagstyle{\vphantom{Äg}#3}} }
+\newcommand*{\skillTag}[2]{\tcbox[colframe=#1, colback=White]{\skilltagstyle{\vphantom{Äg}#2}} }
+\newcommand*{\pastSkillTag}[2]{\tcbox[colframe=white, colback=white, enhanced, frame hidden, borderline={1pt}{0pt}{#1,dashed}]{\skilltagstyle{\vphantom{Äg}#2}} }
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%

@@ -12,78 +12,81 @@
 \colorlet{generalToolsColor}{tagGray}
 \definecolor{pastSkillBackgroundColor}{HTML}{F1F1F1}
 
-% Languages
-\newcommand*{\tagRuby}{\skillTag{languageColor}{White}{Ruby}}
+% General Languages
+\newcommand*{\tagRuby}{\skillTag{languageColor}{Ruby}}
 
-\newcommand*{\tagBash}{\skillTag{languageColor}{White}{Bash (Shell Scripting)}}
-\newcommand*{\tagLaTeX}{\skillTag{languageColor}{White}{\LaTeX}}
+\newcommand*{\tagBash}{\skillTag{languageColor}{Bash (Shell Scripting)}}
+\newcommand*{\tagLaTeX}{\skillTag{languageColor}{\LaTeX}}
 
-\newcommand*{\tagCSS}{\skillTag{webLanguageColor}{White}{CSS}}
-\newcommand*{\tagSASS}{\skillTag{webLanguageColor}{White}{SASS}}
-\newcommand*{\tagHTML}{\skillTag{webLanguageColor}{White}{HTML}}
-\newcommand*{\tagHAML}{\skillTag{webLanguageColor}{White}{HAML}}
-\newcommand*{\tagXML}{\skillTag{webLanguageColor}{White}{XML}}
-\newcommand*{\tagXSLT}{\skillTag{webLanguageColor}{White}{XSLT}}
-\newcommand*{\tagJavaScript}{\skillTag{webLanguageColor}{White}{JavaScript}}
+\newcommand*{\tagCplusplus}{\pastSkillTag{oldLanguageColor}{C++}}
+\newcommand*{\tagCSharp}{\pastSkillTag{oldLanguageColor}{C\#}}
+\newcommand*{\tagJava}{\pastSkillTag{oldLanguageColor}{Java}}
+\newcommand*{\tagLispScheme}{\pastSkillTag{languageColor}{Lisp / Scheme}}
+\newcommand*{\tagPerl}{\pastSkillTag{oldLanguageColor}{Perl}}
+\newcommand*{\tagPHP}{\pastSkillTag{oldLanguageColor}{PHP}}
+\newcommand*{\tagPython}{\pastSkillTag{oldLanguageColor}{Python}}
 
-\newcommand*{\tagCplusplus}{\skillTag{oldLanguageColor}{pastSkillBackgroundColor}{C++}}
-\newcommand*{\tagCSharp}{\skillTag{oldLanguageColor}{pastSkillBackgroundColor}{C\#}}
-\newcommand*{\tagJava}{\skillTag{oldLanguageColor}{pastSkillBackgroundColor}{Java}}
-\newcommand*{\tagLispScheme}{\skillTag{languageColor}{pastSkillBackgroundColor}{Lisp / Scheme}}
-\newcommand*{\tagPerl}{\skillTag{oldLanguageColor}{pastSkillBackgroundColor}{Perl}}
-\newcommand*{\tagPHP}{\skillTag{oldLanguageColor}{pastSkillBackgroundColor}{PHP}}
-\newcommand*{\tagPython}{\skillTag{oldLanguageColor}{pastSkillBackgroundColor}{Python}}
+% Web Languages
+
+\newcommand*{\tagCSS}{\skillTag{webLanguageColor}{CSS}}
+\newcommand*{\tagSASS}{\skillTag{webLanguageColor}{SASS}}
+\newcommand*{\tagHTML}{\skillTag{webLanguageColor}{HTML}}
+\newcommand*{\tagHAML}{\skillTag{webLanguageColor}{HAML}}
+\newcommand*{\tagXML}{\skillTag{webLanguageColor}{XML}}
+\newcommand*{\tagXSLT}{\skillTag{webLanguageColor}{XSLT}}
+\newcommand*{\tagJavaScript}{\skillTag{webLanguageColor}{JavaScript}}
 
 % Frameworks
-\newcommand*{\tagRails}{\skillTag{frameworksColor}{White}{Rails}}
+\newcommand*{\tagRails}{\skillTag{frameworksColor}{Rails}}
 
-\newcommand*{\tagAngular}{\skillTag{frameworksColor}{pastSkillBackgroundColor}{Angular}}
-\newcommand*{\tagReact}{\skillTag{frameworksColor}{pastSkillBackgroundColor}{React}}
+\newcommand*{\tagAngular}{\pastSkillTag{frameworksColor}{Angular}}
+\newcommand*{\tagReact}{\pastSkillTag{frameworksColor}{React}}
 
-\newcommand*{\tagFlask}{\skillTag{frameworksColor}{pastSkillBackgroundColor}{Flask}}
-\newcommand*{\tagJekyll}{\skillTag{frameworksColor}{White}{Jekyll}}
-\newcommand*{\tagWordpress}{\skillTag{frameworksColor}{pastSkillBackgroundColor}{Wordpress}}
+\newcommand*{\tagFlask}{\pastSkillTag{frameworksColor}{Flask}}
+\newcommand*{\tagJekyll}{\skillTag{frameworksColor}{Jekyll}}
+\newcommand*{\tagWordpress}{\pastSkillTag{frameworksColor}{Wordpress}}
 
 % Databases
-\newcommand*{\tagAirtable}{\skillTag{databasesColor}{White}{Airtable}}
-\newcommand*{\tagMSSQL}{\skillTag{databasesColor}{pastSkillBackgroundColor}{MS SQL}}
-\newcommand*{\tagMongoDB}{\skillTag{databasesColor}{pastSkillBackgroundColor}{MongoDB}}
-\newcommand*{\tagMySQL}{\skillTag{databasesColor}{pastSkillBackgroundColor}{MySQL}}
-\newcommand*{\tagPostgreSQL}{\skillTag{databasesColor}{White}{PostgreSQL}}
-\newcommand*{\tagRedis}{\skillTag{databasesColor}{White}{Redis}}
-\newcommand*{\tagSQLite}{\skillTag{databasesColor}{White}{SQLite}}
+\newcommand*{\tagAirtable}{\skillTag{databasesColor}{Airtable}}
+\newcommand*{\tagMSSQL}{\pastSkillTag{databasesColor}{MS SQL}}
+\newcommand*{\tagMongoDB}{\pastSkillTag{databasesColor}{MongoDB}}
+\newcommand*{\tagMySQL}{\pastSkillTag{databasesColor}{MySQL}}
+\newcommand*{\tagPostgreSQL}{\skillTag{databasesColor}{PostgreSQL}}
+\newcommand*{\tagRedis}{\skillTag{databasesColor}{Redis}}
+\newcommand*{\tagSQLite}{\skillTag{databasesColor}{SQLite}}
 
 % Methodologies
-\newcommand*{\tagAccessibility}{\skillTag{methodologiesColor}{White}{Accessibility}}
-\newcommand*{\tagCI}{\skillTag{methodologiesColor}{White}{CI (Continuous Integration)}}
-\newcommand*{\tagCIShort}{\skillTag{methodologiesColor}{White}{CI}}
-\newcommand*{\tagManualQATesting}{\skillTag{methodologiesColor}{pastSkillBackgroundColor}{Manual Quality Assurance Testing}}
-\newcommand*{\tagManualQATestingShort}{\skillTag{methodologiesColor}{pastSkillBackgroundColor}{Manual QA Testing}}
-\newcommand*{\tagPairProgramming}{\skillTag{methodologiesColor}{White}{Pair Programming}}
-\newcommand*{\tagResponsiveDesign}{\skillTag{methodologiesColor}{White}{Responsive Web Design}}
-\newcommand*{\tagTDD}{\skillTag{methodologiesColor}{White}{TDD (Test-Driven Development)}}
-\newcommand*{\tagTDDShort}{\skillTag{methodologiesColor}{White}{TDD}}
+\newcommand*{\tagAccessibility}{\skillTag{methodologiesColor}{Accessibility}}
+\newcommand*{\tagCI}{\skillTag{methodologiesColor}{CI (Continuous Integration)}}
+\newcommand*{\tagCIShort}{\skillTag{methodologiesColor}{CI}}
+\newcommand*{\tagManualQATesting}{\pastSkillTag{methodologiesColor}{Manual Quality Assurance Testing}}
+\newcommand*{\tagManualQATestingShort}{\pastSkillTag{methodologiesColor}{Manual QA Testing}}
+\newcommand*{\tagPairProgramming}{\skillTag{methodologiesColor}{Pair Programming}}
+\newcommand*{\tagResponsiveDesign}{\skillTag{methodologiesColor}{Responsive Web Design}}
+\newcommand*{\tagTDD}{\skillTag{methodologiesColor}{TDD (Test-Driven Development)}}
+\newcommand*{\tagTDDShort}{\skillTag{methodologiesColor}{TDD}}
+% TODO: Add User Experience?
 
-% Testing Tools
-\newcommand*{\tagMinitest}{\skillTag{methodologiesColor}{White}{Minitest}}
-\newcommand*{\tagRSpec}{\skillTag{methodologiesColor}{White}{RSpec}}
+% Testing Tools (TODO: Evaluate this section)
+\newcommand*{\tagMinitest}{\skillTag{methodologiesColor}{Minitest}}
+\newcommand*{\tagRSpec}{\skillTag{methodologiesColor}{RSpec}}
 
 % Image Manipulation
-\newcommand*{\tagCanva}{\skillTag{visualToolsColor}{White}{Canva}}
-\newcommand*{\tagDreamweaver}{\skillTag{visualToolsColor}{White}{Dreamweaver}}
-\newcommand*{\tagPhotoshop}{\skillTag{visualToolsColor}{White}{Photoshop}}
+\newcommand*{\tagCanva}{\skillTag{visualToolsColor}{Canva}}
+\newcommand*{\tagDreamweaver}{\skillTag{visualToolsColor}{Dreamweaver}}
+\newcommand*{\tagPhotoshop}{\skillTag{visualToolsColor}{Photoshop}}
 
 % Prototyping
-\newcommand*{\tagBalsamiq}{\skillTag{visualToolsColor}{White}{Balsamiq}}
-\newcommand*{\tagFigma}{\skillTag{visualToolsColor}{White}{Figma}}
+\newcommand*{\tagBalsamiq}{\skillTag{visualToolsColor}{Balsamiq}}
+\newcommand*{\tagFigma}{\skillTag{visualToolsColor}{Figma}}
 
 % People Skills
-\newcommand*{\tagCustomerService}{\skillTag{humanSkillsColor}{White}{Customer Service}}
-\newcommand*{\tagECommerce}{\skillTag{humanSkillsColor}{White}{eCommerce}}
-\newcommand*{\tagPeopleManagement}{\skillTag{humanSkillsColor}{White}{People Management}}
-\newcommand*{\tagProjectManagement}{\skillTag{humanSkillsColor}{White}{Project Management}}
-\newcommand*{\tagPublicSpeaking}{\skillTag{humanSkillsColor}{White}{Public Speaking}}
-\newcommand*{\tagTeaching}{\skillTag{humanSkillsColor}{White}{Teaching}}
+\newcommand*{\tagCustomerService}{\skillTag{humanSkillsColor}{Customer Service}}
+\newcommand*{\tagECommerce}{\skillTag{humanSkillsColor}{eCommerce}}
+\newcommand*{\tagPeopleManagement}{\skillTag{humanSkillsColor}{People Management}}
+\newcommand*{\tagProjectManagement}{\skillTag{humanSkillsColor}{Project Management}}
+\newcommand*{\tagPublicSpeaking}{\skillTag{humanSkillsColor}{Public Speaking}}
+\newcommand*{\tagTeaching}{\skillTag{humanSkillsColor}{Teaching}}
 
 % General Tools
-\newcommand*{\tagGit}{\skillTag{generalToolsColor}{White}{Git}}
+\newcommand*{\tagGit}{\skillTag{generalToolsColor}{Git}}
