@@ -495,7 +495,7 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{2.5mm}
+\newcommand{\acvSectionTopSkip}{2mm}
 \newcommand{\acvSectionContentTopSkip}{2mm}
 
 
@@ -728,7 +728,7 @@
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
+  \vspace{-1.5mm}
   % ^ Modification from -3 to -2
   \subsectionstyle{#1}
   \phantomsection
@@ -750,6 +750,7 @@
   \begin{flushleft}
 }{%
   \end{flushleft}
+  \vspace{-3.0mm}
 }
 % Define an entry of cv information
 % Usage: \cventry{<title>}{<date>}{<organization/position>}<{location}>{<description>}
@@ -823,6 +824,7 @@
       } \\}
     \multicolumn{2}{L{\textwidth}}{\entrydescriptionstyle{\description}} \\
   \end{tabular}
+  \vspace{-1.5mm}
 }
 
 % Define an environment for cvsubentry
@@ -909,7 +911,7 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-3.0mm}
+  \vspace{-3.5mm}
   \begin{justify}
   \begin{itemize}
     \setlength{\itemsep}{0.25em}
@@ -918,7 +920,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{2.0mm}
+  \vspace{\acvSectionContentTopSkip}
 }
 
 % Define an environment for cvpublicspeaking, nearly identical to cvhonors,
