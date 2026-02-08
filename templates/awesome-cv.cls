@@ -68,6 +68,12 @@
 \RequirePackage{xstring}
 % Needed to use a toolbox of programming tools
 \RequirePackage{etoolbox}
+% Required to enable LUA programming
+\RequirePackage{luacode}
+% For formatting individual table cells
+\RequirePackage{makecell}
+% For table cells that span multiple rows
+\RequirePackage{multirow}
 % Needed to change line spacing in specific environment
 \RequirePackage{setspace}
 % Needed to manage fonts
@@ -742,6 +748,35 @@
 }{%
   \par
   \vspace{2mm}
+}
+
+\directlua{require("templates/community_involvement.lua")}
+
+% Define an environment for cvcommunityinvolvement
+\newenvironment{cvcommunityinvolvemententries}{%
+  \vspace{\acvSectionContentTopSkip}
+  \directlua{community_involvement_setup()}
+  }{%
+  \directlua{output_community_involvement()}
+  \vspace{-3.0mm}
+}
+
+% Define an entry of cv community involvement
+% Usage: \cvcommunityinvolvemententry{<title>}{<date>}{<organization/position>}<{location}>{<description>}
+\newcommand*{\cvcommunityinvolvemententry}[4]{%
+  \@namedef{positionName}{#1}%
+  \@namedef{positionDate}{#2}%
+  \@namedef{organizationName}{#3}%
+  \@namedef{positionDescription}{#4}%
+
+  \directlua{
+    record_community_involvement(
+      \luastring{\positionName},
+      \luastring{\positionDate},
+      \luastring{\organizationName},
+      \luastring{\positionDescription}
+      )
+  }
 }
 
 % Define an environment for cventry

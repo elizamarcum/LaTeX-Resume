@@ -1,4 +1,4 @@
-JUNK_FILES := $(wildcard *.aux *.log styles/*.aux *.dvi *.pdf)
+JUNK_FILES := $(wildcard *.aux *.fls *.log styles/*.aux *.dvi *.pdf)
 TEX_FILES := $(wildcard *.tex)
 OUTPUT_FILES = $(TEX_FILES:tex=pdf)
 
@@ -9,7 +9,7 @@ view: $(OUTPUT_FILES)
 	open $^
 
 %.pdf: %.tex
-	xelatex $<
+	lualatex $<
 
 clear:
 	rm -rf $(OUTPUT_FILES)
