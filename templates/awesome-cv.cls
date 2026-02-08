@@ -754,10 +754,12 @@
 
 % Define an environment for cvcommunityinvolvement
 \newenvironment{cvcommunityinvolvemententries}{%
-  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
   \directlua{community_involvement_setup()}
+  \begin{flushleft}
   }{%
-  \directlua{output_community_involvement()}
+  \directlua{output_community_involvements()}
+  \end{flushleft}
   \vspace{-3.0mm}
 }
 
@@ -776,7 +778,31 @@
       \luastring{\organizationName},
       \luastring{\positionDescription}
       )
-  }
+    }
+}
+
+\newcommand\T{\rule{0pt}{3.5ex}}       % Top strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+\newcommand*{\rendercvcommunityinvolvemententry}[4]{%
+  \@namedef{positionName}{#1}%
+  \@namedef{positionDate}{#2}%
+  \@namedef{organizationName}{#3}%
+  \@namedef{positionDescription}{#4}%
+  \vspace{-1.0mm} % This seems to get the tabular lined up.  TODO- Figure out if this could be a setting on tabular..
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular}[t]{L{0.5\textwidth - 2.8cm} R{2.4cm}}
+    \entrytitlestyle{\positionName} \ifdefempty{\organizationName}{\vspace{\acvHeaderAfterPositionSkip}}{} & \entrydatestyle{\positionDate} \\
+    \ifdefempty{\organizationName}
+      {}
+      {
+        \entryorganizationstyle{\organizationName} \vspace{\acvHeaderAfterPositionSkip} & \\
+      }
+    \multicolumn{2}{L{0.5\textwidth - 0.2cm}}{
+      \entryorganizationnotestyle{\positionDescription}
+    } \\
+  \end{tabular}%
 }
 
 % Define an environment for cventry
