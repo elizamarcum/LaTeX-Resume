@@ -11,8 +11,6 @@ end
 function output_community_involvement(entry)
   if entry then
     tex.sprint("\\rendercvcommunityinvolvemententry{"..entry.positionName.."}{"..entry.positionDate.."}{"..entry.organizationName.."}{"..entry.positionDescription.."}")
-  else
-    tex.sprint("Community Involvement Entry null?!")
   end
 end
 
@@ -25,7 +23,9 @@ function output_community_involvements()
     local entry = table.remove(entries, 1)
     output_community_involvement(entry)
     tex.sprint(" & ")
-    output_community_involvement(table.remove(entries, 1))
+    local table_length = #entries -- Gives length of entries, e.g. 6
+    local middle_index = math.ceil((table_length / 2) + 0.1) -- Gives the middle item in the array 5 => 3, 6 => 4
+    output_community_involvement(table.remove(entries, middle_index))
     tex.sprint("\\\\")
   end
 

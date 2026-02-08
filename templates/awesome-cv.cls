@@ -760,7 +760,6 @@
   }{%
   \directlua{output_community_involvements()}
   \end{flushleft}
-  \vspace{-3.0mm}
 }
 
 % Define an entry of cv community involvement
@@ -780,9 +779,6 @@
       )
     }
 }
-
-\newcommand\T{\rule{0pt}{3.5ex}}       % Top strut
-\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
 
 \newcommand*{\rendercvcommunityinvolvemententry}[4]{%
   \@namedef{positionName}{#1}%
