@@ -12,6 +12,15 @@ You can generate the PDF from the LaTeX file by running `make`.
 
 See the [releases section in GitHub](https://github.com/elizabrock/LaTeX-Resume/releases) for the downloadable PDF version of my resume.
 
+## Instructions
+
+* Install mactex (e.g. `brew install mactex`)
+* Install the necessary LaTeX packages.
+  * `tlmgr update --self`
+  * `tlmgr install fontawesome6`
+* Generate the resume:
+  * `make`
+
 ## 2025 TODOs
 
 * Add in a selected projects section! iGoDigital, GitLab, This Resume, typesetting The Rails 3 Way etc.
